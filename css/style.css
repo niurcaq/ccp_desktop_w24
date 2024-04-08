@@ -21,7 +21,7 @@ p, h1, h2, h3, h4, h5, h6, ul, li, div{
 h1{
   font-size: 50px;
   line-height: 1;
-  padding: 50px 0;
+  padding: 0px 0px 30px 0px;
   text-align: center;
 }
 
@@ -49,7 +49,62 @@ h2{
   top: 20px;
 }
 
-.nav-grid {
+.sidenav {
+    /* height: 100%; */
+    /* width: 0; */
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    /* top: 0; */
+    /* left: -20px; */
+    bottom: -100px;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+    text-decoration: underline;
+}
+
+.sidenav a:active {
+    border: 2px solid black;
+}
+
+.sidenav a.on {
+    /* text-decoration: underline; */
+    color: beige;
+    border: 2px solid beige;
+    border-radius: 8px;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.nav {
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* .nav-grid {
     position: fixed;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -85,7 +140,7 @@ h2{
     color: black;
     font-weight: bolder;
     text-decoration: underline;
-}
+} */
 
 .item {
     padding: 2px;
@@ -176,13 +231,17 @@ ul {
   img {
     animation: none;
   }
+
+  .sidenav, .sidenav a {
+    transition: none;
+  }
 }
 
 @media screen and (min-width: 550px) {
     /* tablet-view */
-    .nav-grid {
+    /* .nav-grid {
         position: relative;
-    }
+    } */
 
     .grid-map {
         display: grid;
@@ -216,12 +275,29 @@ ul {
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 850px) {
     /* laptop view */
-    .nav-grid {
+    /* .nav-grid {
         top: 0;
         position: relative;
         border-bottom: 2px solid rgb(187, 187, 187);
+    } */
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        /* height: 0;
+        width: 100%; */
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: -20px;
+        /* bottom: -50px;
+        left: 0; */
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
     }
     
     .info {
@@ -276,4 +352,8 @@ ul {
         align-content: center;
         align-items: center;
     }
+}
+
+@media screen and (min-width: 1200px) {
+    
 }

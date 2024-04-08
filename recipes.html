@@ -5,18 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="gif/x-icon" href="https://media.giphy.com/media/kZqbBT64ECtjy/giphy.gif">
+    <script src='js/script.js'></script>
     <title>Recipes</title>
 </head>
 <body>
     <header>
         <a href = "#recipes" class="skip">Skip to Main Content</a>
         <nav>
-            <div class="nav-grid">
+            <!-- <div class="nav-grid">
                 <div class="item"><a href = "index.html">Home</a></div>
                 <div class="item"><a href = "pets.html">Pets</a></div>
                 <div class="item"><a href = "recipes.html" class="on">Recipes</a></div>
                 <div class="item"><a href = "travel.html">Travel</a></div>
+            </div> -->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href = "index.html">Home</a> 
+                <a href = "pets.html">Pets</a>
+                <a href = "recipes.html" class="on">Recipes</a>
+                <a href = "travel.html">Travel</a>
             </div>
+            <span class="nav" onclick="openNav()">&#9776; Menu</span>
         </nav>
     </header>
 
